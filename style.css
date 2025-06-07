@@ -103,7 +103,7 @@ p.name {
   margin-left: -10%;
   gap: 16px;
 }
-@media (max-device-width: 768px) {
+@media (max-device-width: 1024px) {
   .profilepic {
     background-image: url(images/pexels-anchau-1663967297-32320395.jpg);
     background-position: center;
