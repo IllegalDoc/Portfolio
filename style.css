@@ -3,24 +3,31 @@
   padding: 0;
   font-family: "Roboto", sans-serif;
 }
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 .backgroundpicture {
   height: 100%;
   width: 100%;
   background: #0891b2;
-  clip-path: polygon(0 0, 100% 0, 100% 55%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 49%, 0% 95%);
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
 }
+
 .wrapper {
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 0;
+
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
 header {
@@ -40,7 +47,6 @@ header {
   padding: 48px;
 }
 .profilepic {
-  background-image: url(images/pexels-anchau-1663967297-32320395.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -59,39 +65,40 @@ header {
   z-index: 500;
 }
 
-p.name {
+div.name {
   font-family: "Playfair Display", serif;
-  font-size: 30px;
-  align-self: last baseline;
-  color: black;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+
+  position: absolute;
+  z-index: 100;
 }
 .aboutme {
-  padding: 15px;
+  padding: 1em;
   display: flex;
   background-color: white;
   flex-direction: column;
-  gap: 18px;
-  height: 60%;
+
+  height: 70%;
   align-self: center;
   width: 50%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-bottom: 38px;
+  margin-bottom: 3em;
+  position: relative;
+  bottom: 2%;
 }
 .aboutme span:nth-child(2) {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 1.3em;
+  line-height: 1.4em;
   color: #807e7d;
 }
 .aboutme span:nth-child(3) {
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 1.3em;
+  line-height: 1.4em;
   color: #807e7d;
 }
 .aboutme h3 {
   font-family: "Playfair Display", serif;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 2.5em;
 }
 .links {
   align-self: last baseline;
@@ -99,16 +106,37 @@ p.name {
 .links ul {
   list-style: none;
   display: flex;
-  margin-top: 13%;
+  margin-top: 50%;
   margin-left: -10%;
-  gap: 16px;
+  gap: 2em;
 }
-@media (max-device-width: 1024px) {
+.aboutme > * {
+  flex: 1;
+}
+.profilepic .picture img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.picture {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 5;
+}
+.name p {
+  color: black;
+  font-size: 5rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .aboutme > * {
+    flex: 0;
+  }
   .profilepic {
-    background-image: url(images/pexels-anchau-1663967297-32320395.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 40%;
     display: flex;
     width: 53%;
@@ -136,18 +164,22 @@ p.name {
     width: 90%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     margin-bottom: 38px;
+
     position: relative;
     z-index: 30;
   }
   .backgroundpicture {
     clip-path: polygon(0 0, 100% 0, 100% 35%, 0% 68%);
   }
-  p.name {
-    color: white;
+  .name {
     position: relative;
     bottom: 85%;
-    left: 82%;
-    font-size: 41px;
+    left: 73%;
+  }
+  .name p {
+    color: white;
+
+    font-size: 1rem;
   }
   .aboutme h3 {
     font-family: "Playfair Display", serif;
@@ -158,4 +190,35 @@ p.name {
     right: 12%;
     top: 10%;
   }
+  .aboutme span:nth-child(2) {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: #807e7d;
+    position: relative;
+    left: 59%;
+    top: 10%;
+    width: 43%;
+  }
+  .aboutme span:nth-child(3) {
+    font-size: 0.8em;
+    line-height: 1.3em;
+    color: #807e7d;
+    left: 1%;
+    top: 36%;
+    width: 100%;
+    position: relative;
+  }
+  .links {
+    display: none;
+    position: relative;
+    align-self: last baseline;
+    top: 20%;
+    right: 5%;
+  }
+}
+i {
+  font-size: 3em;
+}
+
+@media (max-width: 768px) {
 }
