@@ -136,6 +136,7 @@ div.name {
   .aboutme > * {
     flex: 0;
   }
+
   .profilepic {
     height: 40%;
     display: flex;
@@ -175,11 +176,12 @@ div.name {
     position: relative;
     bottom: 85%;
     left: 73%;
+    width: 100%;
   }
   .name p {
     color: white;
 
-    font-size: 1rem;
+    font-size: 3.2rem;
   }
   .aboutme h3 {
     font-family: "Playfair Display", serif;
@@ -221,4 +223,33 @@ i {
 }
 
 @media (max-width: 768px) {
+  .profilepic {
+    align-self: center;
+    width: 80%;
+  }
+  .picture {
+    height: auto;
+    width: auto;
+    position: static;
+  }
+  .information {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .aboutme {
+    box-shadow: none;
+  }
+
+  .name p {
+    text-align: center;
+  }
+  .name {
+    align-self: flex-end;
+  }
+  .backgroundpicture {
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 0% 72%);
+  }
+  .aboutme span:nth-child(2) {
+    margin-top: 1em;
+  }
 }
