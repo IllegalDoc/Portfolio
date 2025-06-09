@@ -67,7 +67,7 @@ header {
 
 div.name {
   font-family: "Playfair Display", serif;
-
+  align-self: last baseline;
   position: absolute;
   z-index: 100;
 }
