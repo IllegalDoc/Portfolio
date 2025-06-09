@@ -66,7 +66,6 @@ header {
 }
 
 div.name {
-  font-family: "Playfair Display", serif;
   align-self: last baseline;
   position: absolute;
   z-index: 100;
@@ -130,6 +129,10 @@ div.name {
   color: black;
   font-size: 5rem;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+  font-family: "Playfair Display", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -251,5 +254,10 @@ i {
   }
   .aboutme span:nth-child(2) {
     margin-top: 1em;
+  }
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-optical-sizing: auto;
   }
 }
