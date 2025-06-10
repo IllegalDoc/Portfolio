@@ -30,6 +30,16 @@
 
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
 }
+.projectname h4 {
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+}
+.projectdesc {
+  padding: 1em;
+}
+.projectdesc p {
+  color: #807e7d;
+}
 header {
   background-color: transparent;
   position: relative;
@@ -50,14 +60,31 @@ header {
 .project {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .projectimage {
-  object-fit: contain;
-  height: 80%;
+  height: 60%;
+  width: 100%;
+}
+.projectimage img {
+  height: 100%;
   width: 100%;
 }
 .projectname {
   display: flex;
+  flex: 1;
+  justify-content: space-around;
+  gap: 15%;
+  align-items: center;
+  margin-right: 5%;
+}
+.projectname ul {
+  display: flex;
+  gap: 64%;
+}
+.projectname ul li i {
+  font-size: 1.5em;
 }
 .profilepic {
   background-position: center;
@@ -153,9 +180,13 @@ div.name {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+  row-gap: 15%;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .projectname {
+  }
+
   .gridprojects {
     grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
   }
@@ -275,7 +306,7 @@ div.name {
   }
   .name p {
     text-align: center;
-    font-size: 6em;
+    font-size: 3.2em;
     white-space: break-spaces;
   }
   .name {
@@ -299,6 +330,7 @@ div.name {
   }
   .gridprojects {
     grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
+    justify-items: center;
   }
   .projects {
     position: relative;
