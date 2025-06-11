@@ -434,12 +434,12 @@ footer .pictures img {
   }
   .projects {
     position: relative;
-    top: 35vh;
+    top: 362px;
   }
   footer {
     position: relative;
-    top: 164vh;
-    height: 106vh;
+    top: 1600px;
+    height: 145vh;
   }
   #links {
     align-self: center;
@@ -449,7 +449,7 @@ footer .pictures img {
     gap: 7%;
   }
   .content .pictures {
-    margin-right: 18%;
+    margin-left: 14%;
     margin-top: 7%;
   }
   .contactme {
@@ -457,6 +457,9 @@ footer .pictures img {
   }
   .content {
     flex-direction: column;
+  }
+  footer .pictures img {
+    height: 62%;
   }
 }
 
