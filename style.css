@@ -434,11 +434,12 @@ footer .pictures img {
   }
   .projects {
     position: relative;
-    top: 362px;
+    top: 500px;
   }
   footer {
     position: relative;
-    top: 1600px;
+    top: 1800px;
+
     height: 145vh;
   }
   #links {
