@@ -430,10 +430,33 @@ footer .pictures img {
   .gridprojects {
     grid-template-columns: repeat(auto-fill, minmax(80%, 1fr));
     justify-items: center;
+    row-gap: 2%;
   }
   .projects {
     position: relative;
     top: 35vh;
+  }
+  footer {
+    position: relative;
+    top: 164vh;
+    height: 106vh;
+  }
+  #links {
+    align-self: center;
+  }
+  .contactme {
+    align-items: center;
+    gap: 7%;
+  }
+  .content .pictures {
+    margin-right: 18%;
+    margin-top: 7%;
+  }
+  .contactme {
+    flex: 1;
+  }
+  .content {
+    flex-direction: column;
   }
 }
 
