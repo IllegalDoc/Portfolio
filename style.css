@@ -148,6 +148,9 @@ div.name {
   margin-left: -10%;
   gap: 2em;
 }
+#links ul {
+  margin-left: 0;
+}
 .aboutme > * {
   flex: 1;
 }
@@ -181,6 +184,84 @@ div.name {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
   row-gap: 15%;
+}
+#links {
+  margin-left: 0;
+  align-self: baseline;
+}
+
+footer {
+  height: 100vh;
+  background-color: #0891b2;
+}
+footer .pictures img {
+  height: 90%;
+}
+.content .pictures {
+  height: 90%;
+  width: 60%;
+  align-self: center;
+  flex: 1;
+  margin-right: 8%;
+}
+.contactme {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 4%;
+}
+.address p {
+  font-size: 1.2rem;
+}
+
+.phonelogo i {
+  color: white;
+}
+
+.maillogo i {
+  color: white;
+}
+
+.phone {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 5%;
+}
+.mail {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 5%;
+}
+.phonenumber p {
+  color: white;
+}
+.email p {
+  color: white;
+}
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+}
+.address p {
+  color: white;
+}
+.content {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 10%;
+  padding: 2%;
+}
+.contactheader h1 {
+  color: white;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3rem;
+  font-weight: 10;
+}
+.saying p {
+  color: white;
+  font-size: 1.2rem;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
